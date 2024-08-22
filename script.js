@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getWeather(city) {
         const API_KEY = 'fddff08f21d58323cf28149d2d4e4947'
-        const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+        //  const API_URL = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
 
         fetch(API_URL)
         .then(response => response.json())
