@@ -12,6 +12,7 @@ const translations = {
         humidity: 'Humedad',
         wind: 'Viento',
         feelsLike: 'Sensación',
+        portfolio: 'Portafolio',
         errorIcon: '🌫️',
         errorMsg: 'Ciudad no encontrada. Intenta de nuevo.',
     },
@@ -23,6 +24,7 @@ const translations = {
         humidity: 'Humidity',
         wind: 'Wind',
         feelsLike: 'Feels Like',
+        portfolio: 'Portfolio',
         errorIcon: '🌫️',
         errorMsg: 'City not found. Please try again.',
     }
