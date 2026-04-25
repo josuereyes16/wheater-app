@@ -1,38 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Josue Reyes">
+    <meta name="theme-color" content="#dbeafe">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Weather App ⛅</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Weather App</h1>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Ingresa una ciudad">
-            <button id="searchButton">Buscar</button>
-        </div>
-        <div id="weatherDisplay" class="weather-display">
 
+    <!-- Background -->
+    <div class="bg-layer"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="stars"></div>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="weather-emoji">🌤</div>
+            <h1 data-i18n="title">Weather App</h1>
+            <p class="subtitle" data-i18n="subtitle">Descubre el clima en cualquier ciudad</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" data-i18n-placeholder="placeholder" placeholder="Ingresa una ciudad...">
+                <button id="searchButton" data-i18n="search">Buscar</button>
+            </div>
+        </div>
+
+        <div id="weatherDisplay" class="weather-display hidden"></div>
+        <div id="loadingSpinner" class="loading hidden">
+            <div class="spinner"></div>
         </div>
     </div>
+
     <script src="script.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                        console.log('Service Worker registrado con éxito:', registration);
-                    })
-                    .catch(function(error) {
-                        console.log('Falló el registro del Service Worker:', error);
-                    });
+                    .then(r => console.log('SW registrado:', r))
+                    .catch(e => console.log('SW falló:', e));
             });
         }
     </script>
-    
 </body>
 </html>
