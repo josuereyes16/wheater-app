@@ -32,10 +32,11 @@ body {
     min-height: 100dvh;
     background: #040d1a;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
-    padding: 80px 16px 40px;
+    padding: 80px 16px 0;
     overflow-x: hidden;
 }
 
@@ -432,6 +433,58 @@ input[type="text"]::placeholder {
     font-size: 0.88rem;
 }
 
+/* ---- FOOTER ---- */
+.footer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 16px 32px;
+}
+
+.footer-name {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 400;
+    transition: color 0.22s ease;
+    padding: 3px 0;
+}
+
+.footer-link:hover {
+    color: rgb(255, 255, 255);
+}
+
+.footer-dot {
+    color: rgba(0, 26, 255, 0.2);
+    font-size: 0.75rem;
+}
+
 /* ---- UTILS ---- */
 .hidden { display: none !important; }
 
@@ -444,7 +497,7 @@ input[type="text"]::placeholder {
 
 @media (min-height: 700px) and (min-width: 480px) {
     body {
-        align-items: center;
+        justify-content: center;
         padding-top: 40px;
     }
 }
