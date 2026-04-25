@@ -1,7 +1,8 @@
 
 ## Josue Reyes Wheater APP / Aplicación del tiempo Josue Reyes → [josuereyes16](https://github.com/josuereyes16)
 
-![image](https://github.com/user-attachments/assets/643d2b79-dedd-4ea6-9717-d197b317a3c3)
+<img width="2843" height="1414" alt="image" src="https://github.com/user-attachments/assets/effe122c-2be6-4e15-a46e-1915ea1a37d2" />
+
 
 
 | Description | Descripcion |
